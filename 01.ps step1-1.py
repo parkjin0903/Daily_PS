@@ -1,6 +1,3 @@
-print("""         ,r'"7
-r`-_   ,'  ,/
- \. ". L_r'
-   `~\/
-      |
-      |""")
+A = input(int())
+B = input(int())
+print(A+B)
