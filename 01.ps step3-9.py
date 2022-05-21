@@ -1,5 +1,4 @@
-N, X = map(int,input().split())
-A = list(map(int, input().split()))
-for i in range(N):
-    if A[i] < X:
-        print(A[i], end=" ")
+import sys
+while A == 0 and B == 0:
+A, B = map(int, sys.stdinline().split())
+print(A+B)
