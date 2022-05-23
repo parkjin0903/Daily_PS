@@ -1,6 +1,16 @@
-a = int(input())
-list1 = list(map(int, input().split()))
-
-b = max(list1)
-aver_list = [list1[i]/b*100 for i in range(a)]
-print((sum(aver_list))/a)
+num = int(input())
+count = 0
+list_sum = []
+for _ in range(num):
+    testcase = input()
+    for i in range ((len(testcase))):
+        if testcase[i] == 'O':
+            count += 1
+            list_sum.append(count)
+        elif testcase[i] == 'X':
+            count = 0
+            list_sum.append(count)
+    print(sum(list_sum))
+    print(list_sum)
+    
+    
