@@ -1,14 +1,13 @@
-N, M = map(int, input().split())
-input_list = list(map(int, input().split()))
-
+num = input() # 216
+len_num = len(num) * 9 # 27
 answer = 0
 
-for i in range(len(input_list)-2):
-  for j in range(i+1, len(input_list)-1):
-    for k in range(j+1, len(input_list)):
-      if input_list[i] + input_list[j] + input_list[k] > M:
-        continue
-      else: 
-        answer = max(answer, input_list[i] + input_list[j] + input_list[k])
+for i in range(int(num)-len_num, int(num)): # (216-27, 216)
+  for j in range(len(str(i))): #3 
+    answer += int(str(i)[j])  
 
-print(answer)
+  if answer + i != int(num):
+    continue 
+    
+  else:
+    print(i)
