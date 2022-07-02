@@ -1,14 +1,18 @@
-x_grid = []
-y_grid = []
+from collections import Counter
 
-for _ in range(3):
-  a, b = map(int, input().split())
-  x_grid.append(a)
-  y_grid.append(b)
-for i in range(3):
-  if x_grid.count(x_grid[i]) == 1:
-    answer_x = x_grid[i]
-  if y_grid.count(y_grid[i]) == 1:
-    answer_y = y_grid[i]
+species = []
+a = int(input())
+b = int(input())
+for test_case in range(a):
+  for cloth in range(b):
+    a, b = map(int, input().split())
+    species.append(b)
+  result_species = Counter(species)  
+  for key in result_species:
+    answer *= result_species[key] + 1
+  print(answer -1) 
 
-print(answer_x, answer_y)
+
+
+
+
