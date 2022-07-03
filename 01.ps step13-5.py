@@ -1,13 +1,14 @@
-import sys
-input = sys.stdin.readline
+# 14-6
 
-while True:
+M, N = map(int, input().split())
 
-  list1  = list(map(int, input().split()))
-  list1.sort()
-  if list1[0] == 0 and list1[1] == 0 and list1[2] == 0 :
-    break
-  elif list1[0]**2 + list1[1]**2 == list1[2]**2:
-    print('right')
-  else:
-    print('wrong')
+def countnum(num1, num2):
+  count = 0
+  while num1 != 0 :
+    num1 = num1 // num2
+    count += num1
+  return count 
+
+print(min(countnum(M, 2) - countnum(M-N, 2) - countnum(N, 2)), countnum(M, 5)- countnum(M-N, 5) - countnum(N, 5)) 
+
+
