@@ -1,11 +1,20 @@
+import sys
+import string
 
-from itertools import permutations
-
-n, m = map(int, input().split())
-
-list1 = [i for i in range(1, n+1)]
-
-per = list(permutations(list1, m))
-
-for i in per:
-  print(' '.join(map(str, i)))
+s = input()
+q = int(input())
+# 알파벳별 저장
+char_list = {}
+for char in string.ascii_lowercase:
+    char_list[char] = [0]
+    count = 0
+    for i in range(len(s)):
+        if s[i] == char:
+            count += 1
+        char_list[char].append(count)
+        print(char_list)
+        
+for _ in range(q):
+    char, start, end = sys.stdin.readline().rstrip().split()
+    start, end = int(start), int(end)
+    print(char_list[char][end + 1] - char_list[char][start])
