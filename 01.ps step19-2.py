@@ -13,4 +13,4 @@ for _ in range(num):
     elif input_num == 0:
         money_list.pop()
 
-print(sum(money_list))
+print(sum(money_list))                                 
