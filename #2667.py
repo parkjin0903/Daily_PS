@@ -19,9 +19,9 @@ def dfs(x, y):
         dfs(x+1, y)
         dfs(x, y-1)
         dfs(x, y+1)
-        return True # 검사 전에 다 1로 바꿔 버림
+        return True 
     
-    return False # 1은 여기서 멈춤
+    return False 
 
 result = 0
 for i in range(num):
@@ -34,5 +34,5 @@ for i in range(num):
 house.sort()
         
 print(result)
-for i in range(len(house)):
-    print(num[i])
+for i in house:
+    print(i)

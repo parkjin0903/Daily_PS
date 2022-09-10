@@ -1,13 +1,19 @@
-# 1436
+from itertools import permutations
 
 n = int(input())
-cnt = 0
-six = 666
-while 1:
-    if '666' in str(six):
-        cnt += 1
-    if cnt == n:
-        print(six)
-        break
-    six += 1
+k = int(input())
+cards = []
 
+for _ in range(n):
+    card = input()
+    cards.append(card)
+
+result = set()
+
+for i in permutations(cards, k):
+    print(i)
+    result.add(''.join(i))
+
+print(result)
+
+print(len(result))
