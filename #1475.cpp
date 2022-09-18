@@ -17,4 +17,5 @@ int main(void)
     }
     num[6] = num[9] = (num[6] + 1) / 2;
     cout << *max_element(num, num + 10);
+    cout << num;
 }
