@@ -1,13 +1,16 @@
+#include <iostream>
 #include <string>
 #include <vector>
+#include <cmath>
 
 using namespace std;
 
-double solution(vector<int> arr) {
-    double answer = 0, sum = 0;
-    for(int i=0; i<arr.size(); i++){
-        sum += arr[i];
-    }
-    answer = sum / arr.size();
-    return answer;
+int main(){
+	
+	long long a = 3;
+	long long b = sqrt(a);
+	cout << b << endl;
+	
+	return 0;
 }
+
