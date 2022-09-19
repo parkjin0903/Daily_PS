@@ -1,11 +1,12 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
 int main() {
-	int R1, S;
-	cin >> R1 >> S;
-	cout << 2 * S - R1 << endl;
-
+	vector<int> answer;
+	answer.push_back(2);
+	
+	cout << answer << " ";
 	return 0;
 }
