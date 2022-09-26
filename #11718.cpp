@@ -1,20 +1,26 @@
+
 #include <iostream>
-#include <string>
+#include <algorithm>
+ 
 using namespace std;
-
-int main()
-{
-	string input;
-
-	while (1)
-	{
-		getline(cin, input);  // 앤터가 나오기 전 까지 한 줄 입력 
-
-		if (input == "")  // 공백이 입력되면 종료 
-			break;
-
-		cout << input  << endl;  // 입력된 한 줄 출력 
+ 
+int main(int argc, const char * argv[]) {
+ 
+	ios_base::sync_with_stdio(0);
+ 
+	int N;
+	cin >> N;
+ 
+	int array[1000001];
+ 
+	for(int i = 0; i < N; i++) {
+		cin >> array[i];
 	}
-
+ 
+	sort(array, array + N);		// 0 ~ N-1 범위 정렬
+ 
+	cout << array[0] << " " << array[N - 1];
+ 
 	return 0;
+ 
 }
