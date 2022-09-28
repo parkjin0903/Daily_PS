@@ -1,18 +1,21 @@
-#include <string>
-#include <vector>
+#include <iostream>
 
 using namespace std;
 
-int solution(vector<int> absolutes, vector<bool> signs) {
-    int answer = 0;
-    for(int i=0; i<absolutes.size(); i++){
-        if(signs[i]){
-            answer += absolutes[i];
-        }
-        else{
-            answer -= absolutes[i];
-        }
-    }
-    
-    return answer;
+int main(){
+	int n;
+	char ch;
+	
+	cin >> n;
+	int total=0;
+	
+	for(int i=0; i<n;i++){
+		cin >> ch;
+		total += ch-'0';
+	}
+	
+	cout << total << endl;
+	
+	return 0;
+
 }
