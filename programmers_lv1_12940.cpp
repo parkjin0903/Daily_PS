@@ -3,18 +3,11 @@
 
 using namespace std;
 
-vector<int> solution(int n, int m) {
-    int temp;
-    int temp1;
-    temp1 = n * m;
-    while(n!=0){
-        temp = m % n;
-        m = n;
-        n = temp;
-        }
-    vector<int> answer;
-    answer.push_back(m);
-    answer.push_back(temp1/m);
-    
-    return answer;
+int main(){
+	vector<int> answer;
+	answer.push_back(1);
+	answer.push_back(2);
+	cout << answer << endl;
+	cout << answer[-1] << endl;
 }
+
