@@ -1,0 +1,20 @@
+n = int(input())
+graph1 = []
+graph2 = []
+init = list(map(int, input().split()))
+graph1.append(init)
+graph2.append(init)
+for i in range(n-1):
+    cache1 = list(map(int, input().split()))
+    cache2 = cache1.copy()
+    cache1[0] += max(graph1[-1][0], graph1[-1][1])
+    cache2[0] += min(graph2[-1][0], graph2[-1][1])
+    cache1[1] += max(graph1[-1][0], graph1[-1][1], graph1[-1][2])
+    cache2[1] += min(graph2[-1][0], graph2[-1][1], graph2[-1][2])
+    cache1[2] += max(graph1[-1][1], graph1[-1][2])
+    cache2[2] += min(graph2[-1][1], graph2[-1][2])
+    graph1.pop()
+    graph2.pop()
+    graph1.append(cache1)
+    graph2.append(cache2)
+print(max(graph1[-1]), min(graph2[-1]))
