@@ -17,7 +17,6 @@ num = int(input())
 # 1 3 7
 # 8 24 56
 
-print(list_ans)
 
 for _ in range(num):
     i, j, x, y = map(int, input().split()) # 1 2 1 2
