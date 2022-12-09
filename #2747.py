@@ -9,4 +9,3 @@ if N > 2:
         dp[i] = dp[i-2] + dp[i-1]
 
 print(dp[N])
-print(dp)
