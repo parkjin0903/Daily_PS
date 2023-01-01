@@ -28,7 +28,11 @@ for _ in range(t):
     for i in range(m):
         a, b = map(int, sys.stdin.readline().split())
         graph[b][a] = 1
+        print(a, b)
+
 
     visited = [0] * (n + 1)
+    print(visited)
+    print(graph)
 
     print(bfs(1))
